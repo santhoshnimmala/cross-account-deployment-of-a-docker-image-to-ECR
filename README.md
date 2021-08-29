@@ -13,7 +13,7 @@ Before proceeding any further, you need to identify and designate two AWS accoun
 Tools – The AWS account where pipeline resides
 Workload – The AWS account where deployment occurs
 
-![Solution Diagram](assets/diagram.png)
+![Solution Diagram](assets/Arch.png)
 
 ## Solution Overview
 Start by building the necessary resources in the target account, as shown in the following architecture diagram. This consists of an IAM role that trusts the tools account and provides the required deployment-specific permissions. This IAM role is assumed by AWS CodeBuild in the tools account to carry out deployment. For simplicity, we refer to this role as the cross-account role, as specified in the architecture diagram.
@@ -26,10 +26,10 @@ You then build a CI/CD pipeline in the tools account using following below steps
 * Choose option to Another AWS account 
 * Assign a policy's like below 
 * Trust Relationship should look like below (Note:- please specify the codebuild role name you are going to assign to codebuild)
-![Create Role](assets/Target_account1.png)
-![Attaching Permissions](assets/Target_account2.png)
-![ECR Permissions](assets/Target_account3.png)
-![Trust Relationship](assets/Target_account4.png)
+![Create Role](assets/TargetAccount1.png)
+![Attaching Permissions](assets/TargetAccount2.png)
+![ECR Permissions](assets/TargetAccount3.png)
+![Trust Relationship](assets/TargetAccount4.png)
 * create a ECR repository
 ![Create ECR Repo](assets/ToolsAccount7.png)
 

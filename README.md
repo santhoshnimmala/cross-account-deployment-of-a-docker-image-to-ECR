@@ -26,10 +26,10 @@ You then build a CI/CD pipeline in the tools account using following below steps
 * Choose option to Another AWS account 
 * Assign a policy's like below 
 * Trust Relationship should lokk like below (Note:- please specify the codebuild role name you are going to assign to codebuild)
-![Solution Diagram](assets/Target_account1.png)
-![Solution Diagram](assets/Target_account2.png)
-![Solution Diagram](assets/Target_account3.png)
-![Solution Diagram](assets/Target_account4.png)
+![Create Role](assets/Target_account1.png)
+![Attaching Permissions](assets/Target_account2.png)
+![ECR Permissions](assets/Target_account3.png)
+![Trust Relationship](assets/Target_account4.png)
 * create a ECR repository
 ![Create ECR Repo](assets/ToolsAccount7.png)
 
